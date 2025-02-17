@@ -1,0 +1,168 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #f5f7fa; /* Light gray background */
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* App Container */
+.App {
+  background: #ffffff; /* White background for the main container */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.App:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Styling */
+.App-header {
+  background: linear-gradient(135deg, #6c5ce7, #0984e3);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.App-header p {
+  font-size: 1.2rem;
+  color: #dcdfe1;
+}
+
+/* Navigation Link */
+.App-link {
+  color: #74b9ff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #0984e3;
+}
+
+/* Buttons */
+button {
+  background: #00b894; /* Fresh green color */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #00cec9;
+  transform: translateY(-2px); /* Hover lift effect */
+}
+
+button:disabled {
+  background: #b2bec3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Forms */
+input[type="text"],
+input[type="password"] {
+  width: 100%;                  /* Ensure full width */
+  padding: 12px 15px;            /* Equal padding for both */
+  margin: 10px 0;                /* Uniform margin between fields */
+  font-size: 1rem;               /* Same font size for consistency */
+  border: 1px solid #dfe6e9;     /* Light border for both */
+  border-radius: 8px;            /* Same rounded corners */
+  box-sizing: border-box;        /* Prevents box overflow */
+  transition: all 0.3s ease;     /* Smooth transition for focus effect */
+  height: 45px;                  /* Fixed height for uniformity */
+}
+
+/* Focus Effect for Input Fields */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #00b894;         /* Green border on focus */
+  box-shadow: 0 0 10px rgba(0, 185, 148, 0.3); /* Glow effect */
+  outline: none;                 /* Remove default outline */
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to the App container */
+.App {
+  animation: slideUp 1s ease-out;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .App-header {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 15px;
+  }
+
+  .App-header h1 {
+    font-size: 2rem;
+  }
+}
+
